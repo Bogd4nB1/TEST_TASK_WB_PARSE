@@ -1,0 +1,28 @@
+{
+  "name": "testtask_api_wb",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon index.js",
+    "migrate": "knex migrate:latest --knexfile ./src/db/knexfile.js",
+    "make": "knex migrate:make --knexfile knexfile.js --migrations-directory ./src/db/migrations"
+  },
+  "keywords": [],
+  "author": "Bogd4nB1",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "googleapis": "^153.0.0",
+    "knex": "^3.1.0",
+    "node-cron": "^4.2.1",
+    "pg": "^8.16.3"
+  }
+}
