@@ -24,7 +24,7 @@ const cron = require('node-cron');
  */
 function setupCronJobs() {
     // Запуск каждый час в начале часа (0 * * * *)
-    cron.schedule('*/5 * * * *', async () => {
+    cron.schedule('0 * * * *', async () => {
         console.log(`[${new Date().toISOString()}] Starting scheduled tariffs update...`);
         try {
             await updateTariffs();
